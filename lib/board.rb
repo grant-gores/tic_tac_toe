@@ -28,6 +28,8 @@ class Board
     winning_lines.any? {|line| line.uniq.length == 1 && line.first != " "}
   end
 
+  private
+
   def winning_lines
     @grid + @grid.transpose + diagonals
   end
