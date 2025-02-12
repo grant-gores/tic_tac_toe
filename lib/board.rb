@@ -1,13 +1,13 @@
 class Board
   def initialize
-    @grid = Array.new(3){Array.new(3, " ")}
+    @grid = Array.new(3) { Array.new(3, " ") }
   end
 
   def display
     puts "\n"
     @grid.each_with_index do |row, i|
-      puts row.map {|cell| cell.empty? ? " ": cell}.join{" | "}
-      puts "--+---+--" unless i == 2
+      puts row.map { |cell| cell.center(5) }.join("|")
+      puts "-" * 17 unless i == 2  # Adjusts the width of the separator line
     end
     puts "\n"
   end
