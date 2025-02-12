@@ -13,7 +13,7 @@ class Board
   end
 
   def valid_move?(row, col)
-    row.between?(0, 2) && col.between(0, 2) && @grid[row][col] == " "
+    row.between?(0, 2) && col.between?(0, 2) && @grid[row][col] == " "
   end
 
   def place_symbol(row, col, symbol)

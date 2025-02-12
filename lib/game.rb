@@ -5,7 +5,7 @@ class Game
   def initialize
     @board = Board.new
     @player = [Player.new("X"), Player.new("O")]
-    @current_player = @players.first
+    @current_player = @player.first
   end
 
   def play
